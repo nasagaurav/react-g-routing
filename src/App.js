@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Link,
+  useNavigate,
+} from 'react-router-dom';
 
 export default function App() {
   return (
@@ -19,6 +25,10 @@ export default function App() {
 }
 
 function Header() {
+  const handleClick = (e) => {
+    let pageName = e.target.innerHTML;
+    let fullPath = '/' + pageName;
+  };
   return (
     <header>
       <Link to="">Homepage</Link>
@@ -26,16 +36,20 @@ function Header() {
       <Link to="/Signup">Signup</Link>
       <Link to="/Cart">Cart</Link>
       <Link to="/Orders">Orders</Link>
-      <Link to="/Profile">Profile</Link>
-      <Link to="/Errorpage">Errorpage</Link>
+
+      <button onClick={handleClick}>Homepage</button>
+      <button onClick={handleClick}>Login</button>
+      <button onClick={handleClick}>signup</button>
+      <button onClick={handleClick}>Cart</button>
+      <button onClick={handleClick}>Orders</button>
     </header>
   );
 }
 
-const Home=()=><div>Home</div>;
-const Login=()=><div>Login</div>;
-const Signup=()=><div>Signup</div>;
-const Cart=()=><div>Cart</div>;
-const Orders=()=><div>Orders</div>;
-const Profile=()=><div>Profile</div>;
-const Errorpage=()=><div>Errorpage</div>;
+const Home = () => <div>Home</div>;
+const Login = () => <div>Login</div>;
+const Signup = () => <div>Signup</div>;
+const Cart = () => <div>Cart</div>;
+const Orders = () => <div>Orders</div>;
+const Profile = () => <div>Profile</div>;
+const Errorpage = () => <div>Errorpage</div>;
