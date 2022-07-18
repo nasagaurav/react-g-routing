@@ -6,13 +6,13 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="" element={<h1>homepage</h1>} />
-        <Route path="login" element={<h1>login</h1>} />
-        <Route path="signup" element={<h1>signup</h1>} />
-        <Route path="cart" element={<h1>cart</h1>} />
-        <Route path="orders" element={<h1>orders</h1>} />
-        <Route path="profile" element={<h1>profile</h1>} />
-        <Route path="errorpage" element={<h1>errorpage</h1>} />
+        <Route path="" element={<home />} />
+        <Route path="Login" element={<Login />} />
+        <Route path="Signup" element={<Signup />} />
+        <Route path="Cart" element={<Cart />} />
+        <Route path="Orders" element={<Orders />} />
+        <Route path="Profile" element={<Profile />} />
+        <Route path="*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
   );
@@ -21,13 +21,21 @@ export default function App() {
 function Header() {
   return (
     <header>
-      <Link to="">homepage</Link>
-      <Link to="/login">login</Link>
-      <Link to="/signup">signup</Link>
-      <Link to="/cart">cart</Link>
-      <Link to="/orders">orders</Link>
-      <Link to="/profile">profile</Link>
-      <Link to="/errorpage">errorpage</Link>
+      <Link to="">Homepage</Link>
+      <Link to="/Login">Login</Link>
+      <Link to="/Signup">Signup</Link>
+      <Link to="/Cart">Cart</Link>
+      <Link to="/Orders">Orders</Link>
+      <Link to="/Profile">Profile</Link>
+      <Link to="/Errorpage">Errorpage</Link>
     </header>
   );
 }
+
+Const Home=()=><div>Home</div>;
+Const Login=()=><div>Login</div>;
+Const Signup=()=><div>Signup</div>;
+Const Cart=()=><div>Cart</div>;
+Const Orders=()=><div>Orders</div>;
+Const Profile=()=><div>Profile</div>;
+Const Errorpage=()=><div>Errorpage</div>;
