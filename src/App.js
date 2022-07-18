@@ -32,10 +32,10 @@ function Header() {
   );
 }
 
-Const Home=()=><div>Home</div>;
-Const Login=()=><div>Login</div>;
-Const Signup=()=><div>Signup</div>;
-Const Cart=()=><div>Cart</div>;
-Const Orders=()=><div>Orders</div>;
-Const Profile=()=><div>Profile</div>;
-Const Errorpage=()=><div>Errorpage</div>;
+const Home=()=><div>Home</div>;
+const Login=()=><div>Login</div>;
+const Signup=()=><div>Signup</div>;
+const Cart=()=><div>Cart</div>;
+const Orders=()=><div>Orders</div>;
+const Profile=()=><div>Profile</div>;
+const Errorpage=()=><div>Errorpage</div>;
